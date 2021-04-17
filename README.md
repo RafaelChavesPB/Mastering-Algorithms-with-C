@@ -1,0 +1,1 @@
+Repositório utilizado para guardar os códigos desenvolvidos a partir do Livro Mastering Algorithms with C, o livro foca na utilização de C puro na construçõesdas estruturas de dados e de algoritmos básicos.
