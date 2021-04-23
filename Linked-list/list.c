@@ -13,7 +13,7 @@ void list_init(List *list, void (*destroy)(void *data)){
 void list_destroy(List *list){
 	void *data;
 	while(list_size(list)>0){
-		if(list_rem_next(list, NULL, (void **)&data))== 0 && list->destroy != NULL){
+		if(list_rem_next(list, NULL, (void **)&data)== 0 && list->destroy != NULL){
 			list->destroy(data);
 		}
 	}
@@ -40,7 +40,7 @@ int list_ins_next(List *list, ListElmt *element, const void *data){
 	}
 
 	list->size++;
-	return; 
+	return 0; 
 }
 
 int list_rem_next(List *list, ListElmt *element, void **data){
@@ -65,5 +65,4 @@ int list_rem_next(List *list, ListElmt *element, void **data){
 	free(old_element);
 	list->size--;		
 	return 0;
-
 }
