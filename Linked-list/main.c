@@ -26,14 +26,15 @@ int main()
 		printf("%p %d %d\n", it, *(int *)it->data, count++);
 		it = it->next;
 	}
-	// printf("List destruction(Pointer/Head/Deleted element/List size):\n");
-	// while (list_size(lista) > 0)
-	// {
-	// 	void *data;
-	// 	printf("%p %d ", list_head(lista), *(int *)list_head(lista)->data);
-	// 	list_rem_next(lista, NULL, &data);
-	// 	printf("%d %d\n", *(int *)data, list_size(lista));
-	// }
-	list_destroy(lista);
+	printf("List destruction(Pointer/Head/Deleted element/List size):\n");
+	while (list_size(lista) > 0)
+	{
+		void *data;
+		printf("%p %d ", list_head(lista), *(int *)list_head(lista)->data);
+		list_rem_next(lista, NULL, &data);
+		printf("%d %d\n", *(int *)data, list_size(lista));
+	}
+	//Equivalent to:
+	//list_destroy(lista);
 	return 0;
 }
